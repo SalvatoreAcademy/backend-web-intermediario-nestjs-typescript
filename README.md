@@ -1,5 +1,3 @@
-### README.md
-
 # **Biblioteca de Recursos de Aprendizado com Assistente Inteligente**
 
 ## **Descrição**

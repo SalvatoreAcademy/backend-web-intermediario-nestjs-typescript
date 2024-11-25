@@ -1,99 +1,123 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+### README.md
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# **Biblioteca de Recursos de Aprendizado com Assistente Inteligente**
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## **Descrição**
 
-## Description
+Este projeto é a base para a **Biblioteca de Recursos de Aprendizado com Assistente Inteligente**, uma plataforma que oferece um assistente virtual integrado para suporte ao aprendizado. O objetivo é ajudar alunos a encontrar recursos personalizados, responder perguntas técnicas, e oferecer recomendações de materiais para estudo.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A plataforma é desenvolvida utilizando **Nest.js** como framework backend e outras tecnologias modernas para garantir escalabilidade, eficiência e integração com serviços inteligentes.
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## **Funcionalidades**
 
-## Compile and run the project
+- **Busca Inteligente**: Sugestões automáticas de recursos de aprendizado baseadas no progresso do aluno.
+- **FAQs Personalizadas**: Perguntas frequentes respondidas por um modelo de linguagem (LLM).
+- **Recomendações de Estudo**: Indicações de novos materiais com base nas interações e histórico do aluno.
+- **Explicações Detalhadas**: Processos e conceitos explicados passo a passo, com links diretos para recursos relacionados.
 
-```bash
-# development
-$ npm run start
+---
 
-# watch mode
-$ npm run start:dev
+## **Tecnologias Utilizadas**
 
-# production mode
-$ npm run start:prod
-```
+### **Backend**
 
-## Run tests
+- **Frameworks**:
+  - [Nest.js](https://nestjs.com/) (com base em Express.js)
+- **Linguagem**:
+  - [TypeScript](https://www.typescriptlang.org/)
 
-```bash
-# unit tests
-$ npm run test
+### **Pacotes e Bibliotecas**
 
-# e2e tests
-$ npm run test:e2e
+- **Prisma**: ORM para conexão com o banco de dados e manipulação de dados.
+- **Class Validator**: Validação e sanitização de dados nos DTOs.
+- **Swagger**: Documentação interativa da API.
 
-# test coverage
-$ npm run test:cov
-```
+### **APIs e Integrações**
 
-## Deployment
+- **OpenAI API ou Hugging Face LLMs**: Integração com modelos de linguagem para suporte às funcionalidades inteligentes.
+- **Banco de Dados**:
+  - MongoDB (ou similar) para armazenar histórico e preferências dos alunos.
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+---
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## **Setup Inicial**
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+### **Pré-requisitos**
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+1. Node.js
+2. Gerenciador de pacotes: npm
+3. Banco de dados configurado (MongoDB)
 
-## Resources
+---
 
-Check out a few resources that may come in handy when working with NestJS:
+### **Passo a Passo**
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+1. **Clonar o repositório**
 
-## Support
+   ```bash
+   git clone https://github.com/SalvatoreAcademy/backend-web-intermediario-nestjs-typescript.git
+   cd backend-web-intermediario-nestjs-typescript
+   ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+2. **Instalar as dependências**
 
-## Stay in touch
+   ```bash
+   npm install
+   ```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+3. **Configurar as variáveis de ambiente**
+   Crie um arquivo `.env` na raiz do projeto e configure as variáveis:
 
-## License
+   ```env
+   DATABASE_URL=mongodb://localhost:27017/nome-do-banco
+   ```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+4. **Inicializar o Prisma**
+
+   ```bash
+   npx prisma init
+   npx prisma generate
+   ```
+
+5. **Rodar o servidor**
+
+   ```bash
+   npm run start:dev
+   ```
+
+6. **Acessar a documentação Swagger**
+   Após rodar o servidor, acesse:
+   ```
+   http://localhost:3000/api
+   ```
+
+---
+
+## **Estrutura do Projeto**
+
+### **Arquitetura Base**
+
+O projeto segue os princípios do framework **Nest.js**, dividindo responsabilidades em módulos, controladores e serviços:
+
+- **Module**: Organização e orquestração dos componentes da aplicação.
+- **Controller**: Gerencia as rotas e as requisições recebidas.
+- **Service**: Contém a lógica de negócio e interage diretamente com o banco de dados.
+- **Model/Domain**:
+  - **Entity**: Representação das tabelas ou documentos no banco de dados.
+  - **DTO**: Estrutura para validação e transferência de dados.
+
+---
+
+## **Scripts Disponíveis**
+
+- `npm run start`: Inicia a aplicação em modo de produção.
+- `npm run start:dev`: Inicia a aplicação em modo de desenvolvimento.
+- `npm run test`: Executa os testes da aplicação.
+- `npm run build`: Gera a build da aplicação.
+
+## **Links Importantes**
+
+- [Repositório do Projeto](https://github.com/SalvatoreAcademy/backend-web-intermediario-nestjs-typescript)
+- [Board do Projeto](https://github.com/orgs/SalvatoreAcademy/projects/9/views/1)

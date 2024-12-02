@@ -2,6 +2,8 @@
 
 # **Biblioteca de Recursos de Aprendizado com Assistente Inteligente**
 
+**URL da Aplicação (link público):** https://backend-web-intermediario-nestjs.onrender.com
+
 ## **Descrição**
 
 Este projeto é a base para a **Biblioteca de Recursos de Aprendizado com Assistente Inteligente**, uma plataforma que oferece um assistente virtual integrado para suporte ao aprendizado. O objetivo é ajudar alunos a encontrar recursos personalizados, responder perguntas técnicas, e oferecer recomendações de materiais para estudo.

@@ -4,6 +4,7 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { HfInference } from '@huggingface/inference';
 import { Prisma } from '@prisma/client';
 import { ObjectId } from 'bson';
+import { ConversationDomain } from './domain/conversation.domain';
 
 @Injectable()
 export class ConversationService {
@@ -11,7 +12,9 @@ export class ConversationService {
 
   constructor(private readonly prisma: PrismaService) {}
 
-  async createOrUpdateConversation(dto: UpsertConversationDto) {
+  async createOrUpdateConversation(
+    dto: UpsertConversationDto,
+  ): Promise<ConversationDomain> {
     if (!dto.id) {
       dto.id = new ObjectId().toString();
     }
@@ -56,10 +59,12 @@ export class ConversationService {
 
     // Call LLM API
     const chatCompletion = await this.client.chatCompletion({
-      model: 'meta-llama/Llama-3.2-3B-Instruct',
+      // model: 'meta-llama/Llama-3.2-3B-Instruct',
+      // provider: 'sambanova',
+      model: 'google/gemma-3-27b-it',
       messages: [
         {
-          role: 'user',
+          role: 'system',
           content: `Você é um assistente especializado em ajudar alunos de programação a encontrar recursos de aprendizado e responder perguntas técnicas, sugerindo materiais personalizados. Você responde de forma curta e objetiva, e amplia conforme o estudante pergunta.`,
         },
         ...messageHistory,
@@ -79,7 +84,7 @@ export class ConversationService {
       },
     });
 
-    return conversationUpdated;
+    return conversationUpdated as ConversationDomain;
   }
 
   readAll() {

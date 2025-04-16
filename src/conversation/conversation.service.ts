@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { UpsertConversationDto } from './dto/upsert-conversation.dto';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { HfInference } from '@huggingface/inference';
 import { Prisma } from '@prisma/client';
 import { ObjectId } from 'bson';

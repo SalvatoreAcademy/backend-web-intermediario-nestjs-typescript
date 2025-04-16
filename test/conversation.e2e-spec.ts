@@ -16,7 +16,7 @@ const conversationMessages = [
   },
 ];
 
-describe('AppController (e2e)', () => {
+describe('ConversationModule (e2e)', () => {
   let app: INestApplication;
   const conversationService = {
     readAll: () => conversationMessages,

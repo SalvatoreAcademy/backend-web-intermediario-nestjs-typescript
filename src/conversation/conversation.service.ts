@@ -4,7 +4,10 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { HfInference } from '@huggingface/inference';
 import { Prisma } from '@prisma/client';
 import { ObjectId } from 'bson';
-import { ConversationDomain } from './domain/conversation.domain';
+import {
+  ConversationDomain,
+  ConversationStatus,
+} from './domain/conversation.domain';
 
 @Injectable()
 export class ConversationService {
@@ -84,7 +87,10 @@ export class ConversationService {
       },
     });
 
-    return conversationUpdated as ConversationDomain;
+    return {
+      ...conversationUpdated,
+      status: conversationUpdated.status as ConversationStatus,
+    };
   }
 
   readAll() {
